@@ -1,0 +1,17 @@
+<div class="small-tables">
+  <p>Player Factions</p>
+  <p-table [value]="factionPowerData" sortMode="multiple" [tableStyle]="{'max-width': '30rem'}">
+    <ng-template pTemplate="header">
+      <tr>
+        <th pSortableColumn="name" >Player Faction Name</th>
+        <th pSortableColumn="power" >Player Faction Power</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-faction>
+      <tr>
+        <td>{{faction.name}}</td>
+        <td>{{faction.power}}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

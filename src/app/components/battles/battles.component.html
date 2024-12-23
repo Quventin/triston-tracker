@@ -1,0 +1,97 @@
+<div>
+  <h1>Battles</h1>
+  <!-- Filter Input -->
+  <div style="margin-bottom: 20px;">
+    <label for="playerSearch">Search by Player Name:</label>
+    <input
+      id="playerSearch"
+      type="text"
+      pInputText
+      placeholder="Type a player name"
+      [(ngModel)]="filterText"
+      (input)="filterBattles()"
+    />
+  </div>
+
+  <!-- Table for battles -->
+  <p-table [value]="filteredBattles" [responsiveLayout]="'scroll'" [style]="{ width: '100%' }">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Date</th>
+        <th>Players</th>
+        <th>Event</th>
+        <th>Flashpoint</th>
+        <th>Draw</th>
+        <th>Scenario Name</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-battle>
+      <tr (click)="showBattleDetails(battle)">
+        <td>{{ battle.date | date: 'mediumDate' }}</td>
+        <td>
+          <span *ngFor="let player of battle.players">
+            {{ player.name }}
+            <i *ngIf="player.winner" class="pi pi-trophy" style="color: gold;"></i
+            >{{ !player.winner ? ', ' : '' }}
+          </span>
+        </td>
+        <td>
+          <i
+            class="pi"
+            [ngClass]="battle.isEvent ? 'pi-check' : 'pi-times'"
+            [style.color]="battle.isEvent ? 'green' : 'red'"
+          ></i>
+        </td>
+        <td>
+          <i
+            class="pi"
+            [ngClass]="battle.isFlashpoint ? 'pi-check' : 'pi-times'"
+            [style.color]="battle.isFlashpoint ? 'green' : 'red'"
+          ></i>
+        </td>
+        <td>
+          <i
+            class="pi"
+            [ngClass]="battle.isDraw ? 'pi-check' : 'pi-times'"
+            [style.color]="battle.isDraw ? 'green' : 'red'"
+          ></i>
+        </td>
+        <td>{{ battle.scenarioName }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+  <!-- Popup Dialog -->
+  <p-dialog
+    header="Battle Details"
+    [(visible)]="isDialogVisible"
+    [style]="{ width: '50vw', background: 'white', padding:'5px', border: '1px solid #ccc'}"
+    [modal]="true"
+    [closable]="true"
+  >
+    <ng-template pTemplate="content">
+      <div *ngIf="selectedBattle">
+        <h2>{{ selectedBattle.scenarioName }}</h2>
+        <p><strong>Date:</strong> {{ selectedBattle.date | date: 'medium' }}</p>
+        <ul>
+          <li *ngFor="let player of selectedBattle.players">
+            <strong>{{ player.name }}</strong>
+            <span *ngIf="player.winner">(Winner 🏆)</span>
+            <div>
+              <strong>Side Mission:</strong> {{ player.sideMission ? 'Yes' : 'No' }}
+              <span *ngIf="player.sideMissionRelationId">
+                 ({{ getRelationName(player.sideMissionRelationId) || 'Unknown' }})
+              </span>
+            </div>
+            <div>
+              <strong>Subplot:</strong> {{ player.subPlot ? 'Yes' : 'No' }}
+              <span *ngIf="player.subPlotRelationId">
+                ({{ getRelationName(player.subPlotRelationId) || 'Unknown' }})
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </ng-template>
+  </p-dialog>
+</div>

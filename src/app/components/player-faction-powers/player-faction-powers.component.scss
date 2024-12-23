@@ -1,0 +1,52 @@
+/* Add borders to table, rows, and cells */
+.p-datatable table {
+  border-collapse: collapse; /* Ensures borders collapse into one */
+  width: 100%;
+  max-width: 20rem;
+}
+
+.p-datatable th,
+.p-datatable td {
+  border: 1px solid #ddd; /* Light gray borders */
+  padding: 8px; /* Space inside the cells */
+  text-align: left;
+}
+
+/* Table header styling */
+.p-datatable th {
+  background-color: #f9f9f9; /* Slightly lighter background for header */
+  font-weight: bold;
+}
+
+/* Row hover effect */
+.p-datatable tr:hover {
+  background-color: #f2f2f2; /* Light grayish background on hover */
+}
+
+/* Optional: Add a more distinct style to the selected row */
+.p-datatable tr.p-highlight {
+  background-color: #e0e0e0; /* Slightly darker gray for selected row */
+}
+
+.table-containers, .small-tables {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-tables-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+/* On mobile screens (max-width: 768px), switch to column layout */
+@media (max-width: 768px) {
+  .small-tables-container {
+    flex-direction: column;
+    gap: 10px; /* Adjust gap for a more compact layout */
+  }
+}

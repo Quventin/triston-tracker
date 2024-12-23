@@ -1,0 +1,83 @@
+h1, h2, h3 {
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+p-dropdown {
+  margin-bottom: 20px;
+}
+
+p-table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+pre {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: auto;
+}
+
+.faction-tables{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+}
+
+.relationship-table{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.panel-1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.panel-2 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bonus-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+p-table {
+  width: 100%;
+}
+
+.earned-column {
+  text-align: center;
+  font-size: 1.2rem; /* Adjust icon size for better visibility */
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; /* Remove bullets */
+}
+
+ul li {
+  margin-bottom: 5px; /* Space between descriptions */
+}

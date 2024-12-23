@@ -1,0 +1,8 @@
+<p-card [header]="name" [style]="{ width: '200px' }">
+  <ng-template pTemplate>
+    <p class="big-number"  [ngClass]="{ 'green': (bonus ?? 0) > -1, 'red': (bonus ?? 0) < 0 }" >
+      {{bonus}}
+    </p>
+  </ng-template>
+
+</p-card>

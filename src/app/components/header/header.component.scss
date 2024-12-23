@@ -1,0 +1,46 @@
+/* Navigation container */
+nav {
+  background-color: var(--primary-color, #007ad9); /* Use PrimeNG primary color */
+  padding: 10px 20px;
+  border-radius: 4px; /* Slight rounding for modern look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Navigation list */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+/* Navigation items */
+nav ul li {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 3px; /* Slight rounding for PrimeNG style */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+  cursor: pointer;
+}
+
+nav ul li:hover {
+  background-color: var(--primary-dark-color, #005bb5); /* Darken background on hover */
+  color: #ffffff; /* Text turns white */
+}
+
+/* Links */
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff; /* White text */
+  font-weight: 500; /* Slightly bolder for readability */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Active links */
+nav ul li a.active {
+  font-weight: bold;
+  color: var(--primary-light-color, #b3e5fc); /* Light blue for active links */
+}

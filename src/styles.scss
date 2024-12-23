@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+/* Add borders to table, rows, and cells */
+.p-datatable table {
+  border-collapse: collapse; /* Ensures borders collapse into one */
+  width: 100%;
+}
+
+.p-datatable th,
+.p-datatable td {
+  border: 1px solid #ddd; /* Light gray borders */
+  padding: 8px; /* Space inside the cells */
+  text-align: left;
+}
+
+/* Table header styling */
+.p-datatable th {
+  background-color: #f9f9f9; /* Slightly lighter background for header */
+  font-weight: bold;
+}
+
+/* Row hover effect */
+.p-datatable tr:hover {
+  background-color: #f2f2f2; /* Light grayish background on hover */
+}
+
+/* Optional: Add a more distinct style to the selected row */
+.p-datatable tr.p-highlight {
+  background-color: #e0e0e0; /* Slightly darker gray for selected row */
+}

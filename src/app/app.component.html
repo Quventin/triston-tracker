@@ -1,0 +1,71 @@
+<p>ver: {{data.version}}</p>
+<app-header [data]="data"></app-header>
+<router-outlet></router-outlet>
+
+<!--<div class="table-containers">-->
+<!--  <div class="small-tables-container">-->
+<!--&lt;!&ndash;  <div class="small-tables">&ndash;&gt;-->
+<!--&lt;!&ndash;    <p>Player Factions</p>&ndash;&gt;-->
+<!--&lt;!&ndash;    <p-table [value]="factionPowerData" sortMode="multiple" [tableStyle]="{'max-width': '30rem'}">&ndash;&gt;-->
+<!--&lt;!&ndash;    <ng-template pTemplate="header">&ndash;&gt;-->
+<!--&lt;!&ndash;      <tr>&ndash;&gt;-->
+<!--&lt;!&ndash;        <th pSortableColumn="name" >Player Faction Name</th>&ndash;&gt;-->
+<!--&lt;!&ndash;        <th pSortableColumn="power" >Player Faction Power</th>&ndash;&gt;-->
+<!--&lt;!&ndash;      </tr>&ndash;&gt;-->
+<!--&lt;!&ndash;    </ng-template>&ndash;&gt;-->
+<!--&lt;!&ndash;    <ng-template pTemplate="body" let-faction>&ndash;&gt;-->
+<!--&lt;!&ndash;      <tr>&ndash;&gt;-->
+<!--&lt;!&ndash;        <td>{{faction.name}}</td>&ndash;&gt;-->
+<!--&lt;!&ndash;        <td>{{faction.power}}</td>&ndash;&gt;-->
+<!--&lt;!&ndash;      </tr>&ndash;&gt;-->
+<!--&lt;!&ndash;    </ng-template>&ndash;&gt;-->
+<!--&lt;!&ndash;    </p-table>&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="small-tables">&ndash;&gt;-->
+<!--&lt;!&ndash;      <p>Player Faction Battles</p>&ndash;&gt;-->
+<!--&lt;!&ndash;      <p-table [value]="factionBattles" sortMode="multiple" [tableStyle]="{'max-width': '30rem'}">&ndash;&gt;-->
+<!--&lt;!&ndash;        <ng-template pTemplate="header">&ndash;&gt;-->
+<!--&lt;!&ndash;          <tr>&ndash;&gt;-->
+<!--&lt;!&ndash;            <th pSortableColumn="name" >Player Faction Name</th>&ndash;&gt;-->
+<!--&lt;!&ndash;            <th pSortableColumn="battles" >Player Faction Battle Number</th>&ndash;&gt;-->
+<!--&lt;!&ndash;            <th pSortableColumn="win" >Player Faction Wins Number</th>&ndash;&gt;-->
+<!--&lt;!&ndash;            <th pSortableColumn="lose" >Player Faction Lose Number</th>&ndash;&gt;-->
+<!--&lt;!&ndash;          </tr>&ndash;&gt;-->
+<!--&lt;!&ndash;        </ng-template>&ndash;&gt;-->
+<!--&lt;!&ndash;        <ng-template pTemplate="body" let-faction>&ndash;&gt;-->
+<!--&lt;!&ndash;          <tr>&ndash;&gt;-->
+<!--&lt;!&ndash;            <td>{{faction.name}}</td>&ndash;&gt;-->
+<!--&lt;!&ndash;            <td>{{faction.battles}}</td>&ndash;&gt;-->
+<!--&lt;!&ndash;            <td>{{faction.win}}</td><td>{{faction.lose}}</td>&ndash;&gt;-->
+<!--&lt;!&ndash;          </tr>&ndash;&gt;-->
+<!--&lt;!&ndash;        </ng-template>&ndash;&gt;-->
+<!--&lt;!&ndash;      </p-table>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;  <&ndash;&gt;-->
+<!--&lt;!&ndash;  <p>Játékos alap infók</p>&ndash;&gt;-->
+<!--&lt;!&ndash;  <p-table [value]="factionData" sortMode="multiple" [tableStyle]="{'max-width': '20rem'}">&ndash;&gt;-->
+<!--&lt;!&ndash;    <ng-template pTemplate="header">&ndash;&gt;-->
+<!--&lt;!&ndash;      <tr>&ndash;&gt;-->
+<!--&lt;!&ndash;        <th pSortableColumn="name" >Player Name</th>&ndash;&gt;-->
+<!--&lt;!&ndash;        <th pSortableColumn="factionName" >Faction Name</th>&ndash;&gt;-->
+<!--&lt;!&ndash;        <th pSortableColumn="factionPower">Faction (House) Power</th>&ndash;&gt;-->
+<!--&lt;!&ndash;        <th>Prestige with own House</th>&ndash;&gt;-->
+<!--&lt;!&ndash;        <th>Battle number</th>&ndash;&gt;-->
+<!--&lt;!&ndash;        <th pSortableColumn="wins">Wins</th>&ndash;&gt;-->
+<!--&lt;!&ndash;      </tr>&ndash;&gt;-->
+<!--&lt;!&ndash;    </ng-template>&ndash;&gt;-->
+<!--&lt;!&ndash;    <ng-template pTemplate="body" let-faction>&ndash;&gt;-->
+<!--&lt;!&ndash;      <tr>&ndash;&gt;-->
+<!--&lt;!&ndash;        <td>{{faction.name}}</td>&ndash;&gt;-->
+<!--&lt;!&ndash;        <td>{{faction.factionName}}</td>&ndash;&gt;-->
+<!--&lt;!&ndash;        <td>{{faction.factionPower}}</td>&ndash;&gt;-->
+<!--&lt;!&ndash;        <td>{{faction.factionPrestige}}</td>&ndash;&gt;-->
+<!--&lt;!&ndash;        <td>{{faction.battles}}</td>&ndash;&gt;-->
+<!--&lt;!&ndash;        <td>{{faction.wins}}</td>&ndash;&gt;-->
+<!--&lt;!&ndash;      </tr>&ndash;&gt;-->
+<!--&lt;!&ndash;    </ng-template>&ndash;&gt;-->
+<!--&lt;!&ndash;  </p-table>&ndash;&gt;-->
+
+<!--</div>-->
+

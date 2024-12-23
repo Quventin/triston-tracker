@@ -1,0 +1,133 @@
+<div>
+  <h1>Player Information</h1>
+
+
+
+  <!-- Show player details only when a player is selected -->
+
+
+    <p-dropdown
+      [options]="playerOptions"
+      [(ngModel)]="selectedPlayerId"
+      (ngModelChange)="onPlayerChange($event)"
+      optionLabel="label"
+      placeholder="Select Gang" />
+
+<p-card>
+  <div *ngIf="selectedPlayer">
+  <div class="main-container">
+    <div class="panel-1">
+      <p><strong>Gang Name:</strong> {{ selectedPlayer?.name }}</p>
+      <p><strong>House:</strong> {{ playerHouse }}</p>
+      <p><strong>House Power:</strong> {{ housePower }}</p>
+      <div *ngIf="selectedPlayer?.isChaos">
+        <p><strong>Full Chaos Power:</strong> {{ chaosPower }}</p>
+      </div>
+      <p><strong>Prestige with {{playerHouse}}:</strong> {{ ownHousePrestige }}</p>
+      <p-table [value]="housePowerBonus" [responsiveLayout]="'scroll'" [style]="{ width: '100%' }">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Description</th>
+            <th>Earned</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-bonus>
+          <tr>
+            <!-- Left Column: Description -->
+            <td>
+              <ul>
+                <li *ngFor="let description of bonus.desc">{{ description }}</li>
+              </ul>
+            </td>
+            <!-- Right Column: Earned -->
+            <td class="earned-column">
+              <i
+                class="pi"
+                [ngClass]="bonus.earned ? 'pi-check' : 'pi-times'"
+                [style.color]="bonus.earned ? 'green' : 'red'"
+              ></i>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+    <div class="panel-2">
+      <div class="bonus-cards">
+        <app-bonus-card [bonus]="houseFavourBonus" [name]="'House Favour Bonus'"></app-bonus-card>
+        <app-bonus-card [bonus]="tradingPostBonus" [name]="'Trading Post Bonus'"></app-bonus-card>
+      </div>
+      <p-table [value]="isVenator ? venatorLegacyPrestigeBonus : housePrestigeBonus" [responsiveLayout]="'scroll'" [style]="{ width: '100%' }">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Description</th>
+            <th>Earned</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-bonus>
+          <tr>
+            <!-- Left Column: Description -->
+            <td>
+              <ul>
+                <li *ngFor="let description of bonus.desc">{{ description }}</li>
+              </ul>
+            </td>
+            <!-- Right Column: Earned -->
+            <td class="earned-column">
+              <i
+                class="pi"
+                [ngClass]="bonus.earned ? 'pi-check' : 'pi-times'"
+                [style.color]="bonus.earned ? 'green' : 'red'"
+              ></i>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+  </div>
+</p-card>
+  <div *ngIf="selectedPlayer">
+    <div class="faction-tables">
+      <!-- Relationship with Mifac -->
+      <div class="relationship-table">
+        <h3>Relationship with Minor Factions</h3>
+        <p-table [value]="selectedPlayer.relationshipWithMifac">
+          <ng-template pTemplate="header">
+            <tr>
+              <th>Faction</th>
+              <th>Relationship</th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-rel>
+            <tr>
+              <td>{{ findFactionName(rel.factionId, 'mifac') }}</td>
+              <td>{{ rel.relationship }}</td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+      <div class="relationship-table">
+        <!-- Relationship with PF -->
+        <h3>Relationship with Player Factions</h3>
+        <p-table [value]="selectedPlayer.relationshipWithPF">
+          <ng-template pTemplate="header">
+            <tr>
+              <th>Faction</th>
+              <th>Relationship</th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-rel>
+            <tr [ngStyle]="{ backgroundColor: rel.factionId === selectedPlayer.houseId ? '#f0f8ff' : 'inherit' }">
+              <td>{{ findFactionName(rel.factionId, 'playerFactions') }}</td>
+              <td>{{ rel.relationship }}</td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+    </div>
+
+    <!-- Rest of the Player Model -->
+    <h3>Other Details</h3>
+    <pre>{{ selectedPlayer | json }}</pre>
+  </div>
+</div>

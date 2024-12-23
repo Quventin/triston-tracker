@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Outlaws",
+    "description": "The outlaws are a shadowy and ruthless band operating outside the influence of the great houses in the dangerous depths of the Triston Area. This faction is composed of deserters, fugitives, and those who have fled Imperial Justice, banding together under the leadership of a former grenadier from the Necromunda VIII Regiment. These outlaws thrive in the lawless expanse of the underhive, engaging in smuggling, extortion, and mercenary work to sustain their illicit empire.",
+    "leader": {
+      "name": "Luthor “The King” Drake",
+      "title": "Leader of Outlaws",
+      "description": "Luthor Drake, known as 'The King,' once served as a grenadier in the Necromunda VIII Regiment, part of the infamous Spider Gang. Disillusioned and seeking to escape the oppressive hand of Imperial Justice, Luthor deserted his post and disappeared into the depths of the Triston Area. Here, he found freedom and opportunity, establishing himself as the ruthless leader of the outlaws. With a tactical mind sharpened by military experience and a penchant for brutality, Luthor rules like a bandit king, orchestrating raids, smuggling operations, and extortion schemes. His knowledge of explosives and guerrilla warfare makes him a formidable and feared presence in the underhive."
+    },
+    "associates": [
+      {
+        "name": "Zara “Shade” Voss",
+        "title": "Chief Enforcer",
+        "description": "Zara 'Shade' Voss is Luthor Drake's right hand and the Chief Enforcer of the outlaws. A former bounty hunter with a lethal reputation, Zara is known for her exceptional stealth and combat skills. She enforces Luthor's will with an iron fist, ensuring loyalty through fear and respect. Zara's proficiency with both close-quarters combat and ranged weaponry makes her a versatile and deadly operative. Her loyalty to Luthor is absolute, driven by a shared disdain for the Imperial authorities and a desire for the freedom the outlaws provide."
+      },
+      {
+        "name": "Garick Raal",
+        "title": "Coin Master",
+        "description": "Garrick Raal handles the finances and illicit trade operations of the outlaws. A former merchant who fell afoul of the great houses, Garrick now uses his skills in negotiation and commerce to benefit the outlaws. He ensures the smooth flow of contraband, weapons, and supplies, keeping the faction well-funded and well-armed. Garrick's silver tongue and keen mind make him adept at striking deals and forging alliances, all while staying one step ahead of their enemies. His strategic acumen and resourcefulness are crucial to the survival and prosperity of the outlaws."
+      }
+    ]
+  },
+  {
+    "name": "Belladandy’s Herd",
+    "description": "In the depths of Bloomwyld, where twisted flora thrives and the air is thick with the stench of decay, rumors speak of mutants and heretics. The truth is far darker: the beastmen and various servants of Chaos are beginning to organize under the watchful eye of Belledandy, a female beastman shaman known as the Oracle. Belledandy's Herd is a wild and chaotic group of mutants whose sole desire is to gain the favor of the Dark Gods.",
+    "leader": {
+      "name": "Belladandy, the Oracle",
+      "title": "Leader of Belladandy’s Herd",
+      "description": "Belledandy, also known by her Dark Tongue names Gharzuk, Thagroth, and Zaraksh, is a shaman of unparalleled power. She wields potent psychic abilities and commands the respect and fear of her herd. Her connection to the Dark Gods is evident in the four daemons that accompany her, each representing a different aspect of Chaos. Belledandy's ultimate goal is to lead her herd to glory in the eyes of the Dark Gods, spreading chaos and corruption throughout Bloomwyld."
+    },
+    "associates": [
+      {
+        "name": "Brakgul Ironhide",
+        "title": "Guardian of the Oracle",
+        "description": "Brakgul Ironhide is the brute force of Belledandy's Herd, a hulking beastman with immense strength and resilience. Known as the Arm of the Oracle, Brakgul’s body is covered in thick, scarred hide, and he wields massive, brutal weapons with ease. His loyalty to Belledandy is unshakeable, and he serves as both her enforcer and protector. His presence alone is enough to inspire fear and obedience among the lesser mutants of the herd."
+      },
+      {
+        "name": "Lirithra Darkeye",
+        "title": "Mouth of the Oracle",
+        "description": "Lirithra Darkeye is a female beastman with an uncanny ability to blend in with humans, her appearance almost entirely human save for her piercing, otherworldly eyes. Known as the Mouth of the Oracle, she is the herd's emissary and spokesperson, able to navigate the twisted landscape of Bloomwyld and speak on behalf of Belledandy. Lirithra’s skills in stealth and persuasion make her invaluable, as she can move undetected and manipulate others to further the herd's goals."
+      }
+    ]
+  }
+]

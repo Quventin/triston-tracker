@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "public": "dist/triston-tracker/browser",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
